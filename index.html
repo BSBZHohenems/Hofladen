@@ -203,27 +203,19 @@ footer {
 
 <main>
 
-<section>
+   <section>
     <h2>Adresse</h2>
-    <p>
-        Hofladen der Landwirtschaftsschule BSBZ Hohenems<br>
-        Rheinhofstraße 16<br>
-        6845 Hohenems, Österreich
-    </p>
-</section>
 
-<section>
-    <h2>Öffnungszeiten</h2>
-
-    <div class="oeffnungszeiten-container">
-        <div class="oeffnungszeiten-text">
+    <div class="adresse-container">
+        <div class="adresse-text">
             <p>
-                Donnerstags:<br>
-                <strong>16:00 – 19:00 Uhr</strong>
+                Hofladen der Landwirtschaftsschule BSBZ Hohenems<br>
+                Rheinhofstraße 16<br>
+                6845 Hohenems, Österreich
             </p>
         </div>
 
-        <div class="oeffnungszeiten-karte">
+        <div class="adresse-karte">
             <iframe
                 src="https://www.google.com/maps?q=Rheinhofstraße+16,+6845+Hohenems&output=embed"
                 allowfullscreen=""
@@ -232,6 +224,11 @@ footer {
             </iframe>
         </div>
     </div>
+</section>
+
+<section>
+    <h2>Öffnungszeiten</h2>
+    <p>Donnerstags: 16:00 – 19:00 Uhr</p>
 </section>
 
 <section>
@@ -257,6 +254,30 @@ footer {
 </div>
 
     </div>
+    .adresse-container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.adresse-text {
+    flex: 1;
+    min-width: 220px;
+}
+
+.adresse-karte {
+    flex: 1;
+    min-width: 260px;
+}
+
+.adresse-karte iframe {
+    width: 100%;
+    height: 220px;
+    border: 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 </section>
 
 <section class="besuch-uns">
@@ -368,6 +389,7 @@ footer {
         });
     });
 </script>
+
 
 
 
