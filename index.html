@@ -189,6 +189,35 @@ footer {
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+    /* Adresse mit Karte */
+.adresse-container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.adresse-text {
+    flex: 1;
+}
+
+.adresse-karte {
+    flex: 1;
+}
+
+.adresse-karte iframe {
+    width: 100%;
+    height: 230px;
+    border: 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Mobile Ansicht */
+@media (max-width: 768px) {
+    .adresse-container {
+        flex-direction: column;
+    }
+}
 </style>
 </head>
 
@@ -204,9 +233,11 @@ footer {
 <main>
 
    <section>
+    <section>
     <h2>Adresse</h2>
 
     <div class="adresse-container">
+        <!-- LINKER BEREICH: TEXT -->
         <div class="adresse-text">
             <p>
                 Hofladen der Landwirtschaftsschule BSBZ Hohenems<br>
@@ -214,8 +245,17 @@ footer {
                 6845 Hohenems, Österreich
             </p>
         </div>
-</section>
 
+        <!-- RECHTER BEREICH: KARTE -->
+        <div class="adresse-karte">
+            <iframe
+                src="https://www.google.com/maps?q=Rheinhofstraße+16,+6845+Hohenems&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</section>
 
 <section>
     <h2>Öffnungszeiten</h2>
@@ -354,6 +394,7 @@ footer {
         });
     });
 </script>
+
 
 
 
