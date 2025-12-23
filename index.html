@@ -218,13 +218,13 @@ footer {
         <div class="adresse-karte">
             <iframe
                 src="https://www.google.com/maps?q=Rheinhofstraße+16,+6845+Hohenems&output=embed"
-                allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
     </div>
 </section>
+
 
 <section>
     <h2>Öffnungszeiten</h2>
@@ -258,17 +258,15 @@ footer {
     display: flex;
     gap: 30px;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* WICHTIG: erzwingt nebeneinander */
 }
 
 .adresse-text {
     flex: 1;
-    min-width: 220px;
 }
 
 .adresse-karte {
     flex: 1;
-    min-width: 260px;
 }
 
 .adresse-karte iframe {
@@ -277,6 +275,11 @@ footer {
     border: 0;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+    @media (max-width: 768px) {
+    .adresse-container {
+        flex-wrap: wrap;
+    }
 }
 </section>
 
@@ -389,6 +392,7 @@ footer {
         });
     });
 </script>
+
 
 
 
