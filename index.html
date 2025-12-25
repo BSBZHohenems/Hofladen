@@ -60,77 +60,30 @@ section h2 {
     margin-bottom: 20px;
 }
 
-p, ul {
-    font-size: 1rem;
-    line-height: 1.6;
+/* Adresse */
+.adresse-container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
 }
 
-ul {
-    padding-left: 20px;
-}
-
-/* Besuch uns */
-.besuch-uns {
-    position: relative;
-    background-color: rgba(0,0,0,0.3);
-    color: #fff;
+.adresse-karte iframe {
+    width: 100%;
+    height: 230px;
+    border: 0;
     border-radius: 12px;
-    padding: 60px 30px;
-}
-
-.besuch-uns::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0,0,0,0.4);
-    border-radius: 12px;
-    z-index: 0;
-}
-
-.besuch-uns > * {
-    position: relative;
-    z-index: 1;
-}
-
-.btn {
-    display: inline-block;
-    background-color: #0071e3;
-    color: #fff;
-    padding: 12px 24px;
-    border-radius: 8px;
-    text-decoration: none;
-}
-
-.btn:hover {
-    background-color: #005bb5;
 }
 
 /* Kontakt */
 .kontakt-container {
     display: flex;
     gap: 30px;
-    align-items: center;
     flex-wrap: wrap;
 }
 
-.kontakt-text {
-    flex: 1;
-    min-width: 250px;
-}
-
-.kontakt-bild {
-    flex: 1;
-    min-width: 250px;
-    text-align: right;
-}
-
 .kontakt-bild img {
-    width: 100%;
     max-width: 380px;
-    max-height: 260px;
-    object-fit: cover;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* Collapsible */
@@ -151,11 +104,45 @@ ul {
 }
 
 .content {
-    padding: 0 18px;
     display: none;
-    background-color: rgba(255,255,255,0.9);
-    border-radius: 12px;
-    margin-top: 10px;
+    margin-top: 15px;
+}
+
+/* Bestellformular */
+.bestell-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.bestell-form input,
+.bestell-form textarea,
+.bestell-form select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.bestell-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.btn-senden {
+    background-color: #1b5e20;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 160px;
+}
+
+.btn-senden:hover {
+    background-color: #144a18;
 }
 
 /* Footer */
@@ -163,60 +150,6 @@ footer {
     text-align: center;
     padding: 20px;
     color: #6e6e73;
-    font-size: 0.9rem;
-}
-    .oeffnungszeiten-container {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.oeffnungszeiten-text {
-    flex: 1;
-    min-width: 220px;
-}
-
-.oeffnungszeiten-karte {
-    flex: 1;
-    min-width: 260px;
-}
-
-.oeffnungszeiten-karte iframe {
-    width: 100%;
-    height: 220px;
-    border: 0;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-    /* Adresse mit Karte */
-.adresse-container {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-}
-
-.adresse-text {
-    flex: 1;
-}
-
-.adresse-karte {
-    flex: 1;
-}
-
-.adresse-karte iframe {
-    width: 100%;
-    height: 230px;
-    border: 0;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* Mobile Ansicht */
-@media (max-width: 768px) {
-    .adresse-container {
-        flex-direction: column;
-    }
 }
 </style>
 </head>
@@ -232,27 +165,16 @@ footer {
 
 <main>
 
-   <section>
-    <section>
+<section>
     <h2>Adresse</h2>
-
     <div class="adresse-container">
-        <!-- LINKER BEREICH: TEXT -->
-        <div class="adresse-text">
-            <p>
-                Hofladen der Landwirtschaftsschule BSBZ Hohenems<br>
-                Rheinhofstraße 16<br>
-                6845 Hohenems, Österreich
-            </p>
+        <div>
+            Hofladen der Landwirtschaftsschule BSBZ Hohenems<br>
+            Rheinhofstraße 16<br>
+            6845 Hohenems
         </div>
-
-        <!-- RECHTER BEREICH: KARTE -->
         <div class="adresse-karte">
-            <iframe
-                src="https://www.google.com/maps?q=Rheinhofstraße+16,+6845+Hohenems&output=embed"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+            <iframe src="https://www.google.com/maps?q=Rheinhofstraße+16,+6845+Hohenems&output=embed"></iframe>
         </div>
     </div>
 </section>
@@ -265,30 +187,15 @@ footer {
 <section>
     <h2>Kontakt</h2>
     <div class="kontakt-container">
-        <div class="kontakt-text">
-            <p>
-                <strong>Dipl.-Wirt.-Ing. (FH) Philipp Scheiber</strong><br>
-                <em>Kontaktperson, Hofladenleiter</em>
-            </p>
-            <p>
-                Telefon: 0043 (0)5576 / 73316-32705<br>
-                E-mail: <a href="mailto:schullaedele@bsbz.at">schullaedele@bsbz.at</a>
-            </p>
-            <p>
-                <strong>Betriebsbesichtigungen:</strong><br>
-                Auf Anfrage
-            </p>
+        <div>
+            <strong>Dipl.-Wirt.-Ing. (FH) Philipp Scheiber</strong><br>
+            Telefon: 0043 (0)5576 / 73316-32705<br>
+            E-Mail: schullaedele@bsbz.at
         </div>
-
         <div class="kontakt-bild">
-    <img src="https://www.bsbz.at/fileadmin/_processed_/8/6/csm_2023_Hofladen_a19957797e.jpg" alt="Hofladen Team">
-</div>
-</section>
-
-<section class="besuch-uns">
-    <h2>Besuch uns!</h2>
-    <p>Frische Produkte direkt von unseren Schülerinnen und Schülern.</p>
-    <a href="https://www.bsbz.at/startseite/" target="_blank" class="btn">Mehr erfahren</a>
+            <img src="https://www.bsbz.at/fileadmin/_processed_/8/6/csm_2023_Hofladen_a19957797e.jpg">
+        </div>
+    </div>
 </section>
 
 <section>
@@ -372,33 +279,45 @@ footer {
                 <li>Schokolade</li>
             </ul>
         </div>
-    </section>
+</section>
+
+<section>
+    <button class="collapsible">Hier Bestellen</button>
+    <div class="content">
+
+        <label><strong>Produkt auswählen</strong></label>
+        <select>
+            <option value="">Bitte wählen</option>
+            <option>Fleischpaket</option>
+        </select>
+
+        <form class="bestell-form">
+            <input type="text" placeholder="Name *" required>
+            <input type="email" placeholder="E-Mail">
+            <input type="tel" placeholder="Telefonnummer *" required>
+            <input type="text" placeholder="Adresse *" required>
+            <textarea maxlength="500" placeholder="Gewünschte Bestellung (max. 500 Zeichen)"></textarea>
+            <button type="submit" class="btn-senden">Senden</button>
+        </form>
+
+    </div>
+</section>
+
 </main>
 
 <footer>
-    &copy; 2025 Hofladen Landwirtschaftsschule BSBZ Hohenems
+    © 2025 Hofladen Landwirtschaftsschule BSBZ Hohenems
 </footer>
 
 <script>
-    // JavaScript für Collapsible
-    const coll = document.querySelectorAll(".collapsible");
-    coll.forEach(button => {
-        button.addEventListener("click", function() {
-            this.classList.toggle("active");
-            const content = this.nextElementSibling;
-            if (content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                content.style.display = "block";
-            }
-        });
+const coll = document.querySelectorAll(".collapsible");
+coll.forEach(btn => {
+    btn.addEventListener("click", function () {
+        const content = this.nextElementSibling;
+        content.style.display = content.style.display === "block" ? "none" : "block";
     });
+});
 </script>
 
-
-
-
-
-
-
-
+</body>
+</html>
