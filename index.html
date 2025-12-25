@@ -17,11 +17,12 @@ body {
     background-repeat: no-repeat;
 }
 
-/* Header */
+/* HEADER – dunkelgrün */
 header {
-    background-color: #d4f1c5;
+    background-color: #1b5e20;
     padding: 20px 30px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    color: white;
 }
 
 .header-container {
@@ -35,11 +36,7 @@ header h1 {
     margin: 0;
 }
 
-.header-logo {
-    height: 60px;
-}
-
-/* Main */
+/* MAIN */
 main {
     max-width: 900px;
     margin: 40px auto;
@@ -54,41 +51,9 @@ section {
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-section h2 {
-    font-size: 1.5rem;
-    margin-top: 0;
-    margin-bottom: 20px;
-}
-
-/* Adresse */
-.adresse-container {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-}
-
-.adresse-karte iframe {
-    width: 100%;
-    height: 230px;
-    border: 0;
-    border-radius: 12px;
-}
-
-/* Kontakt */
-.kontakt-container {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.kontakt-bild img {
-    max-width: 380px;
-    border-radius: 12px;
-}
-
-/* Collapsible */
+/* COLLAPSIBLE – dunkelgrün */
 .collapsible {
-    background-color: #0071e3;
+    background-color: #1b5e20;
     color: white;
     cursor: pointer;
     padding: 18px;
@@ -100,7 +65,7 @@ section h2 {
 }
 
 .collapsible:hover {
-    background-color: #005bb5;
+    background-color: #144a18;
 }
 
 .content {
@@ -108,12 +73,11 @@ section h2 {
     margin-top: 15px;
 }
 
-/* Bestellformular */
+/* BESTELLFORMULAR */
 .bestell-form {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    margin-top: 15px;
 }
 
 .bestell-form input,
@@ -127,9 +91,9 @@ section h2 {
 
 .bestell-form textarea {
     min-height: 120px;
-    resize: vertical;
 }
 
+/* SENDEN BUTTON – dunkelgrün */
 .btn-senden {
     background-color: #1b5e20;
     color: white;
@@ -145,7 +109,7 @@ section h2 {
     background-color: #144a18;
 }
 
-/* Footer */
+/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
@@ -159,49 +123,48 @@ footer {
 <header>
     <div class="header-container">
         <h1>Hofladen Landwirtschaftsschule BSBZ Hohenems</h1>
-        <img src="https://www.bsbz.at/fileadmin/_processed_/0/5/csm_logo-hofladen-schule_a1846a3dea.jpg" class="header-logo" alt="Logo">
+        <img src="https://www.bsbz.at/fileadmin/_processed_/0/5/csm_logo-hofladen-schule_a1846a3dea.jpg" height="60">
     </div>
 </header>
 
 <main>
 
+<!-- ADRESSE (ORIGINAL) -->
 <section>
     <h2>Adresse</h2>
-    <div class="adresse-container">
-        <div>
-            Hofladen der Landwirtschaftsschule BSBZ Hohenems<br>
-            Rheinhofstraße 16<br>
-            6845 Hohenems
-        </div>
-        <div class="adresse-karte">
-            <iframe src="https://www.google.com/maps?q=Rheinhofstraße+16,+6845+Hohenems&output=embed"></iframe>
-        </div>
-    </div>
+    <p>
+        Hofladen der Landwirtschaftsschule BSBZ Hohenems<br>
+        Rheinhofstraße 16<br>
+        6845 Hohenems, Österreich
+    </p>
 </section>
 
+<!-- ÖFFNUNGSZEITEN (ORIGINAL) -->
 <section>
     <h2>Öffnungszeiten</h2>
     <p>Donnerstags: 16:00 – 19:00 Uhr</p>
 </section>
 
+<!-- KONTAKT (GENAU WIE ORIGINAL) -->
 <section>
     <h2>Kontakt</h2>
-    <div class="kontakt-container">
-        <div>
-            <strong>Dipl.-Wirt.-Ing. (FH) Philipp Scheiber</strong><br>
-            Telefon: 0043 (0)5576 / 73316-32705<br>
-            E-Mail: schullaedele@bsbz.at
-        </div>
-        <div class="kontakt-bild">
-            <img src="https://www.bsbz.at/fileadmin/_processed_/8/6/csm_2023_Hofladen_a19957797e.jpg">
-        </div>
-    </div>
+    <p>
+        <strong>Dipl.-Wirt.-Ing. (FH) Philipp Scheiber</strong><br>
+        <em>Kontaktperson, Hofladenleiter</em>
+    </p>
+    <p>
+        Telefon: 0043 (0)5576 / 73316-32705<br>
+        E-Mail: <a href="mailto:schullaedele@bsbz.at">schullaedele@bsbz.at</a>
+    </p>
 </section>
 
+<!-- PRODUKTE -->
 <section>
-    <button class="collapsible">Produkte</button>
+    	<button class="collapsible">Produkte</button>
     <div class="content">
        <ul>
+            <h3>Getreide</h3>
+            <ul>
                 <li>Dinkel ganz</li>
                 <li>Dinkelmehl</li>
                 <li>Dinkelgrieß</li>
@@ -281,22 +244,24 @@ footer {
         </div>
 </section>
 
+<!-- HIER BESTELLEN -->
 <section>
     <button class="collapsible">Hier Bestellen</button>
     <div class="content">
 
         <label><strong>Produkt auswählen</strong></label>
-        <select>
+        <select id="paket">
             <option value="">Bitte wählen</option>
-            <option>Fleischpaket</option>
+            <option value="Fleischpaket">Fleischpaket</option>
         </select>
 
-        <form class="bestell-form">
-            <input type="text" placeholder="Name *" required>
-            <input type="email" placeholder="E-Mail">
-            <input type="tel" placeholder="Telefonnummer *" required>
-            <input type="text" placeholder="Adresse *" required>
-            <textarea maxlength="500" placeholder="Gewünschte Bestellung (max. 500 Zeichen)"></textarea>
+        <form class="bestell-form" onsubmit="sendMail(); return false;">
+            <input id="name" type="text" placeholder="Name *" required>
+            <input id="email" type="email" placeholder="E-Mail">
+            <input id="telefon" type="tel" placeholder="Telefonnummer *" required>
+            <input id="adresse" type="text" placeholder="Adresse *" required>
+            <textarea id="bestellung" maxlength="500" placeholder="Gewünschte Bestellung (max. 500 Zeichen)"></textarea>
+
             <button type="submit" class="btn-senden">Senden</button>
         </form>
 
@@ -310,13 +275,29 @@ footer {
 </footer>
 
 <script>
-const coll = document.querySelectorAll(".collapsible");
-coll.forEach(btn => {
+// Collapsible
+document.querySelectorAll(".collapsible").forEach(btn => {
     btn.addEventListener("click", function () {
         const content = this.nextElementSibling;
         content.style.display = content.style.display === "block" ? "none" : "block";
     });
 });
+
+// MAILTO
+function sendMail() {
+    const paket = document.getElementById("paket").value;
+    const body =
+        "Name: " + document.getElementById("name").value + "%0D%0A" +
+        "E-Mail: " + document.getElementById("email").value + "%0D%0A" +
+        "Telefon: " + document.getElementById("telefon").value + "%0D%0A" +
+        "Adresse: " + document.getElementById("adresse").value + "%0D%0A%0D%0A" +
+        "Bestellung:%0D%0A" + document.getElementById("bestellung").value;
+
+    window.location.href =
+        "mailto:antona1.meus@gmail.com" +
+        "?subject=" + encodeURIComponent(paket) +
+        "&body=" + body;
+}
 </script>
 
 </body>
