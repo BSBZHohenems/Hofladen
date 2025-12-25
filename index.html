@@ -17,7 +17,6 @@ body {
     background-repeat: no-repeat;
 }
 
-/* HEADER – dunkelgrün */
 header {
     background-color: #1b5e20;
     padding: 20px 30px;
@@ -36,7 +35,6 @@ header h1 {
     margin: 0;
 }
 
-/* MAIN */
 main {
     max-width: 900px;
     margin: 40px auto;
@@ -51,7 +49,27 @@ section {
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-/* COLLAPSIBLE – dunkelgrün */
+.adresse-container,
+.kontakt-container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.adresse-karte iframe {
+    width: 100%;
+    height: 230px;
+    border: 0;
+    border-radius: 12px;
+}
+
+.kontakt-bild img {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 12px;
+}
+
 .collapsible {
     background-color: #1b5e20;
     color: white;
@@ -73,43 +91,6 @@ section {
     margin-top: 15px;
 }
 
-/* BESTELLFORMULAR */
-.bestell-form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.bestell-form input,
-.bestell-form textarea,
-.bestell-form select {
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-}
-
-.bestell-form textarea {
-    min-height: 120px;
-}
-
-/* SENDEN BUTTON – dunkelgrün */
-.btn-senden {
-    background-color: #1b5e20;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    width: 160px;
-}
-
-.btn-senden:hover {
-    background-color: #144a18;
-}
-
-/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
@@ -129,175 +110,145 @@ footer {
 
 <main>
 
-<!-- ADRESSE (ORIGINAL) -->
+<!-- ADRESSE MIT KARTE -->
 <section>
     <h2>Adresse</h2>
-    <p>
-        Hofladen der Landwirtschaftsschule BSBZ Hohenems<br>
-        Rheinhofstraße 16<br>
-        6845 Hohenems, Österreich
-    </p>
+    <div class="adresse-container">
+        <div>
+            Hofladen der Landwirtschaftsschule BSBZ Hohenems<br>
+            Rheinhofstraße 16<br>
+            6845 Hohenems, Österreich
+        </div>
+        <div class="adresse-karte">
+            <iframe
+                src="https://www.google.com/maps?q=Rheinhofstraße+16,+6845+Hohenems&output=embed"
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
 </section>
 
-<!-- ÖFFNUNGSZEITEN (ORIGINAL) -->
 <section>
     <h2>Öffnungszeiten</h2>
     <p>Donnerstags: 16:00 – 19:00 Uhr</p>
 </section>
 
-<!-- KONTAKT (GENAU WIE ORIGINAL) -->
+<!-- KONTAKT MIT BILD -->
 <section>
     <h2>Kontakt</h2>
-    <p>
-        <strong>Dipl.-Wirt.-Ing. (FH) Philipp Scheiber</strong><br>
-        <em>Kontaktperson, Hofladenleiter</em>
-    </p>
-    <p>
-        Telefon: 0043 (0)5576 / 73316-32705<br>
-        E-Mail: <a href="mailto:schullaedele@bsbz.at">schullaedele@bsbz.at</a>
-    </p>
-</section>
-
-<!-- PRODUKTE -->
-<section>
-    	<button class="collapsible">Produkte</button>
-    <div class="content">
-       <ul>
-            <h3>Getreide</h3>
-            <ul>
-                <li>Dinkel ganz</li>
-                <li>Dinkelmehl</li>
-                <li>Dinkelgrieß</li>
-                <li>Dinkelbrot</li>
-                <li>Dinkelnudeln</li>
-                <li>Bauernbrot</li>
-            </ul>
-
-            <h3>Kekse und Riegel</h3>
-            <ul>
-                <li>Nervenkekse</li>
-                <li>Vegane Kekse</li>
-                <li>Knuspis</li>
-                <li>Chokinis</li>
-                <li>Nussecken</li>
-                <li>Früchtemüsliriegel</li>
-                <li>Müsliriegel</li>
-                <li>Müsli</li>
-                <li>Weihnachtskekse</li>
-            </ul>
-
-            <h3>Obst- & Gemüseerzeugnisse</h3>
-            <ul>
-                <li>Obst und Gemüse</li>
-                <li>Kartoffeln</li>
-                <li>Eingelegtes Gemüse</li>
-                <li>Suppenwürze</li>
-                <li>Schnäpse</li>
-                <li>Liköre</li>
-                <li>Süßmost & Säfte</li>
-                <li>Apfelessig</li>
-                <li>Spezialessige</li>
-                <li>Marmeladen und Eingelegtes</li>
-            </ul>
-
-            <h3>Milchprodukte</h3>
-            <ul>
-                <li>Joghurt</li>
-                <li>Topfen</li>
-                <li>Käse</li>
-                <li>Butter</li>
-            </ul>
-
-            <h3>Fleischprodukte</h3>
-            <ul>
-                <li>Fleischpakete</li>
-                <li>Diverse Aufschnitte</li>
-                <li>Landjäger</li>
-                <li>Kaminwurzen</li>
-                <li>Selchwaren</li>
-                <li>Leberkäse</li>
-                <li>Streichwürste</li>
-            </ul>
-
-            <h3>Torten und Gebäck</h3>
-            <ul>
-                <li>Jede Woche verwöhnen die Schülerinnen der FH2 mit frischen Torten, Kuchen und Gebäck</li>
-            </ul>
-
-            <h3>Honig</h3>
-            <ul>
-                <li>Wald- und Blütenhonig</li>
-                <li>Propoliscreme</li>
-                <li>Propolistropfen</li>
-            </ul>
-
-            <h3>Spezielles</h3>
-            <ul>
-                <li>Osterbäckereien</li>
-                <li>Weihnachtskekse</li>
-                <li>Kräutertees aus unserem eigenen Garten</li>
-                <li>Blütensalz</li>
-                <li>Kräutersalz</li>
-                <li>Blütenzucker und Rosenzucker</li>
-                <li>Schokolade</li>
-            </ul>
+    <div class="kontakt-container">
+        <div>
+            <strong>Dipl.-Wirt.-Ing. (FH) Philipp Scheiber</strong><br>
+            <em>Kontaktperson, Hofladenleiter</em><br><br>
+            Telefon: 0043 (0)5576 / 73316-32705<br>
+            E-Mail: <a href="mailto:schullaedele@bsbz.at">schullaedele@bsbz.at</a>
         </div>
+        <div class="kontakt-bild">
+            <img src="https://www.bsbz.at/fileadmin/_processed_/8/6/csm_2023_Hofladen_a19957797e.jpg" alt="Hofladen Team">
+        </div>
+    </div>
 </section>
 
-<!-- HIER BESTELLEN -->
+<!-- PRODUKTE – VOLLSTÄNDIG WIEDERHERGESTELLT -->
 <section>
-    <button class="collapsible">Hier Bestellen</button>
-    <div class="content">
+<button class="collapsible">Produkte</button>
+<div class="content">
 
-        <label><strong>Produkt auswählen</strong></label>
-        <select id="paket">
-            <option value="">Bitte wählen</option>
-            <option value="Fleischpaket">Fleischpaket</option>
-        </select>
+<h3>Getreide</h3>
+<ul>
+    <li>Dinkel ganz</li>
+    <li>Dinkelmehl</li>
+    <li>Dinkelgrieß</li>
+    <li>Dinkelbrot</li>
+    <li>Dinkelnudeln</li>
+    <li>Bauernbrot</li>
+</ul>
 
-        <form class="bestell-form" onsubmit="sendMail(); return false;">
-            <input id="name" type="text" placeholder="Name *" required>
-            <input id="email" type="email" placeholder="E-Mail">
-            <input id="telefon" type="tel" placeholder="Telefonnummer *" required>
-            <input id="adresse" type="text" placeholder="Adresse *" required>
-            <textarea id="bestellung" maxlength="500" placeholder="Gewünschte Bestellung (max. 500 Zeichen)"></textarea>
+<h3>Kekse und Riegel</h3>
+<ul>
+    <li>Nervenkekse</li>
+    <li>Vegane Kekse</li>
+    <li>Knuspis</li>
+    <li>Chokinis</li>
+    <li>Nussecken</li>
+    <li>Früchtemüsliriegel</li>
+    <li>Müsliriegel</li>
+    <li>Müsli</li>
+    <li>Weihnachtskekse</li>
+</ul>
 
-            <button type="submit" class="btn-senden">Senden</button>
-        </form>
+<h3>Obst- & Gemüseerzeugnisse</h3>
+<ul>
+    <li>Obst und Gemüse</li>
+    <li>Kartoffeln</li>
+    <li>Eingelegtes Gemüse</li>
+    <li>Suppenwürze</li>
+    <li>Schnäpse</li>
+    <li>Liköre</li>
+    <li>Süßmost & Säfte</li>
+    <li>Apfelessig</li>
+    <li>Spezialessige</li>
+    <li>Marmeladen und Eingelegtes</li>
+</ul>
 
-    </div>
+<h3>Milchprodukte</h3>
+<ul>
+    <li>Joghurt</li>
+    <li>Topfen</li>
+    <li>Käse</li>
+    <li>Butter</li>
+</ul>
+
+<h3>Fleischprodukte</h3>
+<ul>
+    <li>Fleischpakete</li>
+    <li>Diverse Aufschnitte</li>
+    <li>Landjäger</li>
+    <li>Kaminwurzen</li>
+    <li>Selchwaren</li>
+    <li>Leberkäse</li>
+    <li>Streichwürste</li>
+</ul>
+
+<h3>Torten und Gebäck</h3>
+<ul>
+    <li>Frische Torten, Kuchen und Gebäck der FH2</li>
+</ul>
+
+<h3>Honig</h3>
+<ul>
+    <li>Wald- und Blütenhonig</li>
+    <li>Propoliscreme</li>
+    <li>Propolistropfen</li>
+</ul>
+
+<h3>Spezielles</h3>
+<ul>
+    <li>Osterbäckereien</li>
+    <li>Weihnachtskekse</li>
+    <li>Kräutertees</li>
+    <li>Blütensalz</li>
+    <li>Kräutersalz</li>
+    <li>Blütenzucker</li>
+    <li>Schokolade</li>
+</ul>
+
+</div>
 </section>
 
 </main>
 
 <footer>
-    © 2025 Hofladen Landwirtschaftsschule BSBZ Hohenems
+© 2025 Hofladen Landwirtschaftsschule BSBZ Hohenems
 </footer>
 
 <script>
-// Collapsible
 document.querySelectorAll(".collapsible").forEach(btn => {
     btn.addEventListener("click", function () {
         const content = this.nextElementSibling;
         content.style.display = content.style.display === "block" ? "none" : "block";
     });
 });
-
-// MAILTO
-function sendMail() {
-    const paket = document.getElementById("paket").value;
-    const body =
-        "Name: " + document.getElementById("name").value + "%0D%0A" +
-        "E-Mail: " + document.getElementById("email").value + "%0D%0A" +
-        "Telefon: " + document.getElementById("telefon").value + "%0D%0A" +
-        "Adresse: " + document.getElementById("adresse").value + "%0D%0A%0D%0A" +
-        "Bestellung:%0D%0A" + document.getElementById("bestellung").value;
-
-    window.location.href =
-        "mailto:antona1.meus@gmail.com" +
-        "?subject=" + encodeURIComponent(paket) +
-        "&body=" + body;
-}
 </script>
 
 </body>
