@@ -173,6 +173,183 @@ footer {
             <img src="https://www.bsbz.at/fileadmin/_processed_/8/6/csm_2023_Hofladen_a19957797e.jpg">
         </div>
     </div>
+<section class="fleischpakete">
+  <h2>Fleischpakete</h2>
+  
+  <div class="paket" data-paket="Paket 1 - 1kg Rindfleisch">
+    <h3>Paket 1</h3>
+    <p><strong>1kg Rindfleisch</strong> (für 1 Person/en)</p>
+    <button class="bestellen">Hier Bestellen</button>
+
+    <!-- Formular versteckt in der Box -->
+    <div class="formular" style="display:none;">
+      <h4>Bestellformular</h4>
+      <form class="bestellForm">
+        <input type="text" name="name" placeholder="Name*" required>
+        <input type="email" name="email" placeholder="E-Mail*" required>
+        <input type="tel" name="telefon" placeholder="Telefon*" required>
+        <input type="text" name="adresse" placeholder="Adresse*" required>
+        <textarea name="infos" placeholder="Zusätzliche Infos (max. 500 Zeichen)" maxlength="500"></textarea>
+        <input type="hidden" name="paket" value="Paket 1 - 1kg Rindfleisch">
+        <button type="submit" class="senden">Senden</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="paket" data-paket="Paket 2 - 5kg Rindfleisch">
+    <h3>Paket 2</h3>
+    <p><strong>5kg Rindfleisch</strong> (für 5 Person/en)</p>
+    <button class="bestellen">Hier Bestellen</button>
+
+    <!-- Formular versteckt in der Box -->
+    <div class="formular" style="display:none;">
+      <h4>Bestellformular</h4>
+      <form class="bestellForm">
+        <input type="text" name="name" placeholder="Name*" required>
+        <input type="email" name="email" placeholder="E-Mail*" required>
+        <input type="tel" name="telefon" placeholder="Telefon*" required>
+        <input type="text" name="adresse" placeholder="Adresse*" required>
+        <textarea name="infos" placeholder="Zusätzliche Infos (max. 500 Zeichen)" maxlength="500"></textarea>
+        <input type="hidden" name="paket" value="Paket 2 - 5kg Rindfleisch">
+        <button type="submit" class="senden">Senden</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<style>
+  .fleischpakete {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+  }
+
+  .fleischpakete h2 {
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .paket {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    flex: 1 1 200px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+  }
+
+  .paket:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  .paket h3 {
+    margin-bottom: 10px;
+    color: #d32f2f;
+  }
+
+  .paket p {
+    margin-bottom: 15px;
+    color: #555;
+  }
+
+  .bestellen {
+    background-color: #d32f2f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+  }
+
+  .bestellen:hover {
+    background-color: #b71c1c;
+  }
+
+  /* Formular im gleichen Stil */
+  .formular {
+    margin-top: 15px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: left;
+  }
+
+  .formular h4 {
+    margin-bottom: 10px;
+    color: #d32f2f;
+  }
+
+  .formular input, .formular textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  .formular .senden {
+    background-color: #d32f2f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .formular .senden:hover {
+    background-color: #b71c1c;
+  }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  emailjs.init("DEIN_EMAILJS_USER_ID"); // EmailJS User ID einfügen
+
+  document.querySelectorAll('.bestellen').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const formular = btn.nextElementSibling;
+      formular.style.display = formular.style.display === 'block' ? 'none' : 'block';
+      formular.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  document.querySelectorAll('.bestellForm').forEach(form => {
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const paket = form.querySelector('input[name="paket"]').value;
+
+      emailjs.send('DEIN_EMAILJS_SERVICE_ID', 'DEIN_EMAILJS_TEMPLATE_ID', {
+        name: form.name.value,
+        email: form.email.value,
+        telefon: form.telefon.value,
+        adresse: form.adresse.value,
+        infos: form.infos.value,
+        paket: paket
+      }).then(() => {
+        alert('Deine Bestellung wurde gesendet!');
+        form.reset();
+        form.parentElement.style.display = 'none';
+      }, (err) => {
+        alert('Fehler beim Senden: ' + JSON.stringify(err));
+      });
+    });
+  });
+</script>
+
 <section>
     <button class="collapsible">Produkte</button>
     <div class="content">
@@ -258,25 +435,6 @@ footer {
     </div>
 </section>
 
-<!-- BESTELLEN -->
-<section>
-<button class="collapsible">Hier Bestellen</button>
-<div class="content">
-
-<label><strong>Produkt auswählen</strong></label>
-<select id="paket">
-    <option value="">Bitte wählen</option>
-    <option value="Fleischpaket">Fleischpaket</option>
-</select>
-
-<form class="bestell-form">
-    <input type="text" placeholder="Name *" required>
-    <input type="email" placeholder="E-Mail">
-    <input type="tel" placeholder="Telefonnummer *" required>
-    <input type="text" placeholder="Adresse *" required>
-    <textarea maxlength="500" placeholder="Gewünschte Bestellung (max. 500 Zeichen)"></textarea>
-    <button type="submit" class="btn-senden">Senden</button>
-</form>
 
 </div>
 </section>
