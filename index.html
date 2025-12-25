@@ -20,7 +20,6 @@ body {
 header {
     background-color: #1b5e20;
     padding: 20px 30px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     color: white;
 }
 
@@ -28,11 +27,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-header h1 {
-    font-size: 2rem;
-    margin: 0;
 }
 
 main {
@@ -46,30 +40,30 @@ section {
     padding: 30px;
     margin-bottom: 30px;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
+/* Adresse & Kontakt Layout */
 .adresse-container,
 .kontakt-container {
     display: flex;
-    gap: 30px;
+    justify-content: space-between;
+    gap: 40px;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 .adresse-karte iframe {
-    width: 100%;
-    height: 230px;
+    width: 320px;
+    height: 200px;
     border: 0;
     border-radius: 12px;
 }
 
 .kontakt-bild img {
-    width: 100%;
-    max-width: 380px;
+    width: 320px;
     border-radius: 12px;
 }
 
+/* Collapsible */
 .collapsible {
     background-color: #1b5e20;
     color: white;
@@ -91,6 +85,41 @@ section {
     margin-top: 15px;
 }
 
+/* Bestellformular */
+.bestell-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.bestell-form input,
+.bestell-form textarea,
+.bestell-form select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.bestell-form textarea {
+    min-height: 120px;
+}
+
+.btn-senden {
+    background-color: #1b5e20;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    width: 160px;
+    cursor: pointer;
+}
+
+.btn-senden:hover {
+    background-color: #144a18;
+}
+
 footer {
     text-align: center;
     padding: 20px;
@@ -110,7 +139,7 @@ footer {
 
 <main>
 
-<!-- ADRESSE MIT KARTE -->
+<!-- Adresse -->
 <section>
     <h2>Adresse</h2>
     <div class="adresse-container">
@@ -120,10 +149,7 @@ footer {
             6845 Hohenems, Österreich
         </div>
         <div class="adresse-karte">
-            <iframe
-                src="https://www.google.com/maps?q=Rheinhofstraße+16,+6845+Hohenems&output=embed"
-                loading="lazy">
-            </iframe>
+            <iframe src="https://www.google.com/maps?q=Rheinhofstraße+16,+6845+Hohenems&output=embed"></iframe>
         </div>
     </div>
 </section>
@@ -133,7 +159,7 @@ footer {
     <p>Donnerstags: 16:00 – 19:00 Uhr</p>
 </section>
 
-<!-- KONTAKT MIT BILD -->
+<!-- Kontakt -->
 <section>
     <h2>Kontakt</h2>
     <div class="kontakt-container">
@@ -144,94 +170,113 @@ footer {
             E-Mail: <a href="mailto:schullaedele@bsbz.at">schullaedele@bsbz.at</a>
         </div>
         <div class="kontakt-bild">
-            <img src="https://www.bsbz.at/fileadmin/_processed_/8/6/csm_2023_Hofladen_a19957797e.jpg" alt="Hofladen Team">
+            <img src="https://www.bsbz.at/fileadmin/_processed_/8/6/csm_2023_Hofladen_a19957797e.jpg">
         </div>
+    </div>
+<section>
+    <button class="collapsible">Produkte</button>
+    <div class="content">
+	<h2>Getreide</h2>
+        <ul>
+            <li>Dinkel ganz</li>
+            <li>Dinkelmehl</li>
+            <li>Dinkelgrieß</li>
+            <li>Dinkelbrot</li>
+            <li>Dinkelnudeln</li>
+            <li>Bauernbrot</li>
+        </ul>
+
+        <h3>Kekse und Riegel</h3>
+        <ul>
+            <li>Nervenkekse</li>
+            <li>Vegane Kekse</li>
+            <li>Knuspis</li>
+            <li>Chokinis</li>
+            <li>Nussecken</li>
+            <li>Früchtemüsliriegel</li>
+            <li>Müsliriegel</li>
+            <li>Müsli</li>
+            <li>Weihnachtskekse</li>
+        </ul>
+
+        <h3>Obst- & Gemüseerzeugnisse</h3>
+        <ul>
+            <li>Obst und Gemüse</li>
+            <li>Kartoffeln</li>
+            <li>Eingelegtes Gemüse</li>
+            <li>Suppenwürze</li>
+            <li>Schnäpse</li>
+            <li>Liköre</li>
+            <li>Süßmost & Säfte</li>
+            <li>Apfelessig</li>
+            <li>Spezialessige</li>
+            <li>Marmeladen und Eingelegtes</li>
+        </ul>
+
+        <h3>Milchprodukte</h3>
+        <ul>
+            <li>Joghurt</li>
+            <li>Topfen</li>
+            <li>Käse</li>
+            <li>Butter</li>
+        </ul>
+
+        <h3>Fleischprodukte</h3>
+        <ul>
+            <li>Fleischpakete</li>
+            <li>Diverse Aufschnitte</li>
+            <li>Landjäger</li>
+            <li>Kaminwurzen</li>
+            <li>Selchwaren</li>
+            <li>Leberkäse</li>
+            <li>Streichwürste</li>
+        </ul>
+
+        <h3>Torten und Gebäck</h3>
+        <ul>
+            <li>Jede Woche verwöhnen die Schülerinnen der FH2 mit frischen Torten, Kuchen und Gebäck</li>
+        </ul>
+
+        <h3>Honig</h3>
+        <ul>
+            <li>Wald- und Blütenhonig</li>
+            <li>Propoliscreme</li>
+            <li>Propolistropfen</li>
+        </ul>
+
+        <h3>Spezielles</h3>
+        <ul>
+            <li>Osterbäckereien</li>
+            <li>Weihnachtskekse</li>
+            <li>Kräutertees aus unserem eigenen Garten</li>
+            <li>Blütensalz</li>
+            <li>Kräutersalz</li>
+            <li>Blütenzucker und Rosenzucker</li>
+            <li>Schokolade</li>
+        </ul>
+
     </div>
 </section>
 
-<!-- PRODUKTE – VOLLSTÄNDIG WIEDERHERGESTELLT -->
+<!-- BESTELLEN -->
 <section>
-<button class="collapsible">Produkte</button>
+<button class="collapsible">Hier Bestellen</button>
 <div class="content">
 
-<h3>Getreide</h3>
-<ul>
-    <li>Dinkel ganz</li>
-    <li>Dinkelmehl</li>
-    <li>Dinkelgrieß</li>
-    <li>Dinkelbrot</li>
-    <li>Dinkelnudeln</li>
-    <li>Bauernbrot</li>
-</ul>
+<label><strong>Produkt auswählen</strong></label>
+<select id="paket">
+    <option value="">Bitte wählen</option>
+    <option value="Fleischpaket">Fleischpaket</option>
+</select>
 
-<h3>Kekse und Riegel</h3>
-<ul>
-    <li>Nervenkekse</li>
-    <li>Vegane Kekse</li>
-    <li>Knuspis</li>
-    <li>Chokinis</li>
-    <li>Nussecken</li>
-    <li>Früchtemüsliriegel</li>
-    <li>Müsliriegel</li>
-    <li>Müsli</li>
-    <li>Weihnachtskekse</li>
-</ul>
-
-<h3>Obst- & Gemüseerzeugnisse</h3>
-<ul>
-    <li>Obst und Gemüse</li>
-    <li>Kartoffeln</li>
-    <li>Eingelegtes Gemüse</li>
-    <li>Suppenwürze</li>
-    <li>Schnäpse</li>
-    <li>Liköre</li>
-    <li>Süßmost & Säfte</li>
-    <li>Apfelessig</li>
-    <li>Spezialessige</li>
-    <li>Marmeladen und Eingelegtes</li>
-</ul>
-
-<h3>Milchprodukte</h3>
-<ul>
-    <li>Joghurt</li>
-    <li>Topfen</li>
-    <li>Käse</li>
-    <li>Butter</li>
-</ul>
-
-<h3>Fleischprodukte</h3>
-<ul>
-    <li>Fleischpakete</li>
-    <li>Diverse Aufschnitte</li>
-    <li>Landjäger</li>
-    <li>Kaminwurzen</li>
-    <li>Selchwaren</li>
-    <li>Leberkäse</li>
-    <li>Streichwürste</li>
-</ul>
-
-<h3>Torten und Gebäck</h3>
-<ul>
-    <li>Frische Torten, Kuchen und Gebäck der FH2</li>
-</ul>
-
-<h3>Honig</h3>
-<ul>
-    <li>Wald- und Blütenhonig</li>
-    <li>Propoliscreme</li>
-    <li>Propolistropfen</li>
-</ul>
-
-<h3>Spezielles</h3>
-<ul>
-    <li>Osterbäckereien</li>
-    <li>Weihnachtskekse</li>
-    <li>Kräutertees</li>
-    <li>Blütensalz</li>
-    <li>Kräutersalz</li>
-    <li>Blütenzucker</li>
-    <li>Schokolade</li>
-</ul>
+<form class="bestell-form">
+    <input type="text" placeholder="Name *" required>
+    <input type="email" placeholder="E-Mail">
+    <input type="tel" placeholder="Telefonnummer *" required>
+    <input type="text" placeholder="Adresse *" required>
+    <textarea maxlength="500" placeholder="Gewünschte Bestellung (max. 500 Zeichen)"></textarea>
+    <button type="submit" class="btn-senden">Senden</button>
+</form>
 
 </div>
 </section>
