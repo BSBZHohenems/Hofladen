@@ -174,108 +174,95 @@ footer {
         </div>
     </div>
 
-<section id="fleischpakete">
-  <h2>Unsere Fleischpakete</h2>
+<section class="fleischpakete">
+  <h2>Fleischpakete</h2>
 
-  <!-- Rindfleischpaket -->
-  <div class="fleischpaket">
+  <!-- Bio-Rindfleisch -->
+  <div class="paket" data-paket="Bio-Rindfleischpaket">
     <h3>Bio-Rindfleischpaket</h3>
-    <img src="img/Fleischpakete 1.jpg" alt="Bio Rindfleischpaket">
-    <ul>
-      <li>Mit Knochen 5 kg – 17,00 €/kg (85,00 € Paket)</li>
-      <li>Ohne Knochen 4 kg – 21,25 €/kg (85,00 € Paket)</li>
-    </ul>
-    <p><strong>Inhalt:</strong> Schnitzel (1,20 kg), Braten (1,00 kg), Gulasch (0,80 kg), Siedefleisch ohne Bein (1,00 kg)</p>
-    <form action="#bestellen" method="POST">
-      <label>Anzahl Pakete:
-        <input type="number" name="rind_paket_anzahl" min="0" value="0">
-      </label>
-      <button type="submit">Hier bestellen</button>
-    </form>
+    <p>
+      <strong>Wahlweise mit oder ohne Knochen</strong><br>
+      Mit Knochen: 5 kg – 85,00 €<br>
+      Ohne Knochen: 4 kg – 85,00 €
+    </p>
+    <p>
+      Inhalt: Schnitzel (1,20 kg), Braten (1,00 kg), Gulasch (0,80 kg),
+      Siedefleisch ohne Bein (1,00 kg)
+    </p>
+
+    <button class="bestellen">Hier Bestellen</button>
+
+    <div class="formular" style="display:none;">
+      <h4>Bestellformular</h4>
+      <form class="bestellForm">
+        <input type="text" name="name" placeholder="Name*" required>
+        <input type="email" name="email" placeholder="E-Mail*" required>
+        <input type="tel" name="telefon" placeholder="Telefon*" required>
+        <input type="text" name="adresse" placeholder="Adresse*" required>
+        <textarea name="infos" placeholder="Zusätzliche Infos (max. 500 Zeichen)" maxlength="500"></textarea>
+        <input type="hidden" name="paket" value="Bio-Rindfleischpaket">
+        <button type="submit" class="senden">Senden</button>
+      </form>
+    </div>
   </div>
 
-  <!-- Schweinefleischpaket -->
-  <div class="fleischpaket">
+  <!-- Bio-Schweinefleisch -->
+  <div class="paket" data-paket="Bio-Schweinefleischpaket">
     <h3>Bio-Schweinefleischpaket</h3>
-    <img src="img/Fleischpakete 2.jpg" alt="Bio Schweinefleischpaket">
-    <p><strong>5 kg Edelteilpaket – 13,90 €/kg (69,50 € Paket)</strong></p>
-    <p><strong>Inhalt:</strong> Schnitzel (1,40 kg), Geschnetzeltes (0,60 kg), Steak (0,70 kg), Kotelett (1,10 kg), Braten (1,20 kg)</p>
-    <form action="#bestellen" method="POST">
-      <label>Anzahl Pakete:
-        <input type="number" name="schwein_paket_anzahl" min="0" value="0">
-      </label>
-      <button type="submit">Hier bestellen</button>
-    </form>
+    <p>
+      <strong>5 kg Edelteilpaket</strong><br>
+      69,50 € pro Paket
+    </p>
+    <p>
+      Inhalt: Schnitzel (1,40 kg), Geschnetzeltes (0,60 kg), Steak (0,70 kg),
+      Kotelett (1,10 kg), Braten (1,20 kg)
+    </p>
+
+    <button class="bestellen">Hier Bestellen</button>
+
+    <div class="formular" style="display:none;">
+      <h4>Bestellformular</h4>
+      <form class="bestellForm">
+        <input type="text" name="name" placeholder="Name*" required>
+        <input type="email" name="email" placeholder="E-Mail*" required>
+        <input type="tel" name="telefon" placeholder="Telefon*" required>
+        <input type="text" name="adresse" placeholder="Adresse*" required>
+        <textarea name="infos" placeholder="Zusätzliche Infos (max. 500 Zeichen)" maxlength="500"></textarea>
+        <input type="hidden" name="paket" value="Bio-Schweinefleischpaket">
+        <button type="submit" class="senden">Senden</button>
+      </form>
+    </div>
   </div>
 
-  <!-- Kalbfleischpaket -->
-  <div class="fleischpaket">
+  <!-- Bio-Kalbfleisch -->
+  <div class="paket" data-paket="Bio-Kalbfleischpaket">
     <h3>Bio-Kalbfleischpaket</h3>
-    <img src="img/Fleischpakete 3.jpg" alt="Bio Kalbfleischpaket">
-    <p><strong>5 kg Edelteilpaket – 23,90 €/kg (119,50 € Paket)</strong></p>
-    <p><strong>Inhalt:</strong> Schnitzel (1,30 kg), Geschnetzeltes (0,70 kg), Braten (1,00 kg), Gulasch (1,00 kg), Rückensteak (1,00 kg)</p>
-    <form action="#bestellen" method="POST">
-      <label>Anzahl Pakete:
-        <input type="number" name="kalb_paket_anzahl" min="0" value="0">
-      </label>
-      <button type="submit">Hier bestellen</button>
-    </form>
+    <p>
+      <strong>5 kg Edelteilpaket</strong><br>
+      119,50 € pro Paket
+    </p>
+    <p>
+      Inhalt: Schnitzel (1,30 kg), Geschnetzeltes (0,70 kg), Braten (1,00 kg),
+      Gulasch (1,00 kg), Rückensteak (1,00 kg)
+    </p>
+
+    <button class="bestellen">Hier Bestellen</button>
+
+    <div class="formular" style="display:none;">
+      <h4>Bestellformular</h4>
+      <form class="bestellForm">
+        <input type="text" name="name" placeholder="Name*" required>
+        <input type="email" name="email" placeholder="E-Mail*" required>
+        <input type="tel" name="telefon" placeholder="Telefon*" required>
+        <input type="text" name="adresse" placeholder="Adresse*" required>
+        <textarea name="infos" placeholder="Zusätzliche Infos (max. 500 Zeichen)" maxlength="500"></textarea>
+        <input type="hidden" name="paket" value="Bio-Kalbfleischpaket">
+        <button type="submit" class="senden">Senden</button>
+      </form>
+    </div>
   </div>
 </section>
 
-#fleischpakete {
-  display: grid;
-  gap: 30px;
-}
-.fleischpaket {
-  border: 1px solid #ccc;
-  padding: 15px;
-  border-radius: 8px;
-}
-.fleischpaket img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-.fleischpaket form {
-  margin-top: 10px;
-}
-
-
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-  emailjs.init("DEIN_EMAILJS_USER_ID"); // EmailJS User ID einfügen
-
-  document.querySelectorAll('.bestellen').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const formular = btn.nextElementSibling;
-      formular.style.display = formular.style.display === 'block' ? 'none' : 'block';
-      formular.scrollIntoView({ behavior: 'smooth' });
-    });
-  });
-
-  document.querySelectorAll('.bestellForm').forEach(form => {
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      const paket = form.querySelector('input[name="paket"]').value;
-
-      emailjs.send('DEIN_EMAILJS_SERVICE_ID', 'DEIN_EMAILJS_TEMPLATE_ID', {
-        name: form.name.value,
-        email: form.email.value,
-        telefon: form.telefon.value,
-        adresse: form.adresse.value,
-        infos: form.infos.value,
-        paket: paket
-      }).then(() => {
-        alert('Deine Bestellung wurde gesendet!');
-        form.reset();
-        form.parentElement.style.display = 'none';
-      }, (err) => {
-        alert('Fehler beim Senden: ' + JSON.stringify(err));
-      });
-    });
-  });
-</script>
 
 <section>
     <button class="collapsible">Produkte</button>
@@ -383,4 +370,5 @@ document.querySelectorAll(".collapsible").forEach(btn => {
 
 </body>
 </html>
+
 
