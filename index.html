@@ -126,6 +126,65 @@ footer {
     color: #6e6e73;
 }
 </style>
+	/* Apple-Rot */
+:root {
+    --apple-red: #c62828;
+    --apple-red-dark: #9b1c1c;
+}
+
+/* Paket Karten */
+.paket {
+    border: 1px solid #eee;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 25px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Bestellen Button */
+.bestellen {
+    background: var(--apple-red);
+    color: white;
+    border: none;
+    padding: 14px 22px;
+    border-radius: 999px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.bestellen:hover {
+    background: var(--apple-red-dark);
+}
+
+/* Formular Animation */
+.formular {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease;
+}
+
+/* Checkbox */
+.checkbox {
+    display: flex;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+/* Senden Button */
+.senden {
+    background: var(--apple-red);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.senden:hover {
+    background: var(--apple-red-dark);
+}
+
 </head>
 
 <body>
@@ -194,15 +253,35 @@ footer {
 
     <div class="formular" style="display:none;">
       <h4>Bestellformular</h4>
-      <form class="bestellForm">
-        <input type="text" name="name" placeholder="Name*" required>
-        <input type="email" name="email" placeholder="E-Mail*" required>
-        <input type="tel" name="telefon" placeholder="Telefon*" required>
-        <input type="text" name="adresse" placeholder="Adresse*" required>
-        <textarea name="infos" placeholder="Zusätzliche Infos (max. 500 Zeichen)" maxlength="500"></textarea>
-        <input type="hidden" name="paket" value="Bio-Rindfleischpaket">
-        <button type="submit" class="senden">Senden</button>
-      </form>
+      <form class="bestellForm"
+      action="https://formsubmit.co/schullaedele@bsbz.at"
+      method="POST">
+
+    <input type="hidden" name="_subject" value="Neue Fleischpaket-Bestellung">
+    <input type="hidden" name="_captcha" value="false">
+
+    <input type="text" name="Name" placeholder="Name*" required>
+    <input type="email" name="E-Mail" placeholder="E-Mail*" required>
+    <input type="tel" name="Telefon" placeholder="Telefon*" required>
+    <input type="text" name="Adresse" placeholder="Adresse*" required>
+
+    <div class="checkbox">
+        <input type="checkbox" required>
+        <label>
+            Sobald ich auf Bestellen klicke, bin ich mir bewusst,
+            dass ich kostenpflichtig bestellt habe und dafür zahlen muss.*
+        </label>
+    </div>
+
+    <textarea name="Zusätzliche Infos"
+              placeholder="Zusätzliche Infos (max. 500 Zeichen)"
+              maxlength="500"></textarea>
+
+    <input type="hidden" name="Paket" value="Bio-Rindfleischpaket">
+
+    <button type="submit" class="senden">Senden</button>
+</form>
+
     </div>
   </div>
 
@@ -222,15 +301,35 @@ footer {
 
     <div class="formular" style="display:none;">
       <h4>Bestellformular</h4>
-      <form class="bestellForm">
-        <input type="text" name="name" placeholder="Name*" required>
-        <input type="email" name="email" placeholder="E-Mail*" required>
-        <input type="tel" name="telefon" placeholder="Telefon*" required>
-        <input type="text" name="adresse" placeholder="Adresse*" required>
-        <textarea name="infos" placeholder="Zusätzliche Infos (max. 500 Zeichen)" maxlength="500"></textarea>
-        <input type="hidden" name="paket" value="Bio-Schweinefleischpaket">
-        <button type="submit" class="senden">Senden</button>
-      </form>
+     <form class="bestellForm"
+      action="https://formsubmit.co/schullaedele@bsbz.at"
+      method="POST">
+
+    <input type="hidden" name="_subject" value="Neue Fleischpaket-Bestellung">
+    <input type="hidden" name="_captcha" value="false">
+
+    <input type="text" name="Name" placeholder="Name*" required>
+    <input type="email" name="E-Mail" placeholder="E-Mail*" required>
+    <input type="tel" name="Telefon" placeholder="Telefon*" required>
+    <input type="text" name="Adresse" placeholder="Adresse*" required>
+
+    <div class="checkbox">
+        <input type="checkbox" required>
+        <label>
+            Sobald ich auf Bestellen klicke, bin ich mir bewusst,
+            dass ich kostenpflichtig bestellt habe und dafür zahlen muss.*
+        </label>
+    </div>
+
+    <textarea name="Zusätzliche Infos"
+              placeholder="Zusätzliche Infos (max. 500 Zeichen)"
+              maxlength="500"></textarea>
+
+    <input type="hidden" name="Paket" value="Bio-Rindfleischpaket">
+
+    <button type="submit" class="senden">Senden</button>
+</form>
+
     </div>
   </div>
 
@@ -250,15 +349,35 @@ footer {
 
     <div class="formular" style="display:none;">
       <h4>Bestellformular</h4>
-      <form class="bestellForm">
-        <input type="text" name="name" placeholder="Name*" required>
-        <input type="email" name="email" placeholder="E-Mail*" required>
-        <input type="tel" name="telefon" placeholder="Telefon*" required>
-        <input type="text" name="adresse" placeholder="Adresse*" required>
-        <textarea name="infos" placeholder="Zusätzliche Infos (max. 500 Zeichen)" maxlength="500"></textarea>
-        <input type="hidden" name="paket" value="Bio-Kalbfleischpaket">
-        <button type="submit" class="senden">Senden</button>
-      </form>
+      <form class="bestellForm"
+      action="https://formsubmit.co/schullaedele@bsbz.at"
+      method="POST">
+
+    <input type="hidden" name="_subject" value="Neue Fleischpaket-Bestellung">
+    <input type="hidden" name="_captcha" value="false">
+
+    <input type="text" name="Name" placeholder="Name*" required>
+    <input type="email" name="E-Mail" placeholder="E-Mail*" required>
+    <input type="tel" name="Telefon" placeholder="Telefon*" required>
+    <input type="text" name="Adresse" placeholder="Adresse*" required>
+
+    <div class="checkbox">
+        <input type="checkbox" required>
+        <label>
+            Sobald ich auf Bestellen klicke, bin ich mir bewusst,
+            dass ich kostenpflichtig bestellt habe und dafür zahlen muss.*
+        </label>
+    </div>
+
+    <textarea name="Zusätzliche Infos"
+              placeholder="Zusätzliche Infos (max. 500 Zeichen)"
+              maxlength="500"></textarea>
+
+    <input type="hidden" name="Paket" value="Bio-Rindfleischpaket">
+
+    <button type="submit" class="senden">Senden</button>
+</form>
+
     </div>
   </div>
 </section>
@@ -360,6 +479,19 @@ footer {
 </footer>
 
 <script>
+	<script>
+document.querySelectorAll(".bestellen").forEach(button => {
+    button.addEventListener("click", () => {
+        const formular = button.nextElementSibling;
+        if (formular.style.maxHeight) {
+            formular.style.maxHeight = null;
+        } else {
+            formular.style.maxHeight = formular.scrollHeight + "px";
+        }
+    });
+});
+</script>
+
 document.querySelectorAll(".collapsible").forEach(btn => {
     btn.addEventListener("click", function () {
         const content = this.nextElementSibling;
@@ -370,5 +502,6 @@ document.querySelectorAll(".collapsible").forEach(btn => {
 
 </body>
 </html>
+
 
 
