@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -176,46 +177,114 @@ footer {
     </div>
 <section class="fleischpakete">
   <h2>Fleischpakete</h2>
-  
-  <div class="paket" data-paket="Paket 1 - 1kg Rindfleisch">
-    <h3>Paket 1</h3>
-    <p><strong>1kg Rindfleisch</strong> (für 1 Person/en)</p>
+
+  <!-- Bio-Rindfleisch -->
+  <div class="paket" data-paket="Bio-Rindfleischpaket">
+    <h3>Bio-Rindfleischpaket</h3>
+    <p>
+      <strong>Wahlweise mit oder ohne Knochen</strong><br>
+      Mit Knochen: 5 kg – 17,00 €/kg (85,00 € / Paket)<br>
+      Ohne Knochen: 4 kg – 21,25 €/kg (85,00 € / Paket)
+    </p>
+    <p>
+      Inhalt: Schnitzel (1,20 kg), Braten (1,00 kg),
+      Gulasch (0,80 kg), Siedefleisch ohne Bein (1,00 kg)
+    </p>
+
     <button class="bestellen">Hier Bestellen</button>
 
-    <!-- Formular versteckt in der Box -->
     <div class="formular" style="display:none;">
       <h4>Bestellformular</h4>
-      <form class="bestellForm">
-        <input type="text" name="name" placeholder="Name*" required>
-        <input type="email" name="email" placeholder="E-Mail*" required>
-        <input type="tel" name="telefon" placeholder="Telefon*" required>
-        <input type="text" name="adresse" placeholder="Adresse*" required>
-        <textarea name="infos" placeholder="Zusätzliche Infos (max. 500 Zeichen)" maxlength="500"></textarea>
-        <input type="hidden" name="paket" value="Paket 1 - 1kg Rindfleisch">
-        <button type="submit" class="senden">Senden</button>
-      </form>
-    </div>
-  </div>
+     
+<form class="bestellForm">
+  <input type="text" name="name" placeholder="Name*" required>
+  <input type="email" name="email" placeholder="E-Mail*" required>
+  <input type="tel" name="telefon" placeholder="Telefon*" required>
+  <input type="text" name="adresse" placeholder="Adresse*" required>
 
-  <div class="paket" data-paket="Paket 2 - 5kg Rindfleisch">
-    <h3>Paket 2</h3>
-    <p><strong>5kg Rindfleisch</strong> (für 5 Person/en)</p>
+  <textarea name="infos"
+    placeholder="Zusätzliche Infos (max. 500 Zeichen)"
+    maxlength="500"></textarea>
+
+ <label style="display:flex; align-items:center; gap:8px;">
+  <input type="checkbox" required>
+  <span>Hiermit ist mir bewusst, dass ich das Paket kostenpflichtig bestelle.</span>
+</label>
+ <button type="submit" class="senden">Senden</button>
+</form>
+</div>
+
+  <!-- Bio-Schweinefleisch -->
+  <div class="paket" data-paket="Bio-Schweinefleischpaket">
+    <h3>Bio-Schweinefleischpaket</h3>
+    <p>
+      <strong>5 kg Edelteilpaket</strong><br>
+      13,90 €/kg – 69,50 € / Paket
+    </p>
+    <p>
+      Inhalt: Schnitzel (1,40 kg), Geschnetzeltes (0,60 kg),
+      Steak (0,70 kg), Kotelett (1,10 kg), Braten (1,20 kg)
+    </p>
+
     <button class="bestellen">Hier Bestellen</button>
 
-    <!-- Formular versteckt in der Box -->
+    <div class="formular" style="display:none;">
+     <form class="bestellForm">
+  <input type="text" name="name" placeholder="Name*" required>
+  <input type="email" name="email" placeholder="E-Mail*" required>
+  <input type="tel" name="telefon" placeholder="Telefon*" required>
+  <input type="text" name="adresse" placeholder="Adresse*" required>
+
+  <textarea name="infos"
+    placeholder="Zusätzliche Infos (max. 500 Zeichen)"
+    maxlength="500"></textarea>
+
+  <label style="display:flex; align-items:center; gap:8px;">
+  <input type="checkbox" required>
+  <span>Hiermit ist mir bewusst, dass ich das Paket kostenpflichtig bestelle.</span>
+</label>
+  <button type="submit" class="senden">Senden</button>
+</form>
+</div>
+ 
+  </div>
+
+  <!-- Bio-Kalbfleisch -->
+  <div class="paket" data-paket="Bio-Kalbfleischpaket">
+    <h3>Bio-Kalbfleischpaket</h3>
+    <p>
+      <strong>5 kg Edelteilpaket</strong><br>
+      23,90 €/kg – 119,50 € / Paket
+    </p>
+    <p>
+      Inhalt: Schnitzel (1,30 kg), Geschnetzeltes (0,70 kg),
+      Braten (1,00 kg), Gulasch (1,00 kg), Rückensteak (1,00 kg)
+    </p>
+
+    <button class="bestellen">Hier Bestellen</button>
+
     <div class="formular" style="display:none;">
       <h4>Bestellformular</h4>
-      <form class="bestellForm">
-        <input type="text" name="name" placeholder="Name*" required>
-        <input type="email" name="email" placeholder="E-Mail*" required>
-        <input type="tel" name="telefon" placeholder="Telefon*" required>
-        <input type="text" name="adresse" placeholder="Adresse*" required>
-        <textarea name="infos" placeholder="Zusätzliche Infos (max. 500 Zeichen)" maxlength="500"></textarea>
-        <input type="hidden" name="paket" value="Paket 2 - 5kg Rindfleisch">
-        <button type="submit" class="senden">Senden</button>
-      </form>
-    </div>
+     <form class="bestellForm">
+  <input type="text" name="name" placeholder="Name*" required>
+  <input type="email" name="email" placeholder="E-Mail*" required>
+  <input type="tel" name="telefon" placeholder="Telefon*" required>
+  <input type="text" name="adresse" placeholder="Adresse*" required>
+
+  <textarea name="infos"
+    placeholder="Zusätzliche Infos (max. 500 Zeichen)"
+    maxlength="500"></textarea>
+
+  <label style="display:flex; align-items:center; gap:8px;">
+  <input type="checkbox" required>
+  <span>Hiermit ist mir bewusst, dass ich das Paket kostenpflichtig bestelle.</span>
+</label>
+ <button type="submit" class="senden">Senden</button>
+</form>
+</div>
+ 
   </div>
+
 </section>
 
 <style>
@@ -314,6 +383,10 @@ footer {
   .formular .senden:hover {
     background-color: #b71c1c;
   }
+/* Pakete untereinander anzeigen */
+.fleischpakete {
+  flex-direction: column;
+}
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
