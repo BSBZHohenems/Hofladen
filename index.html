@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -126,65 +127,6 @@ footer {
     color: #6e6e73;
 }
 </style>
-	/* Apple-Rot */
-:root {
-    --apple-red: #c62828;
-    --apple-red-dark: #9b1c1c;
-}
-
-/* Paket Karten */
-.paket {
-    border: 1px solid #eee;
-    border-radius: 16px;
-    padding: 24px;
-    margin-bottom: 25px;
-    background: white;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-
-/* Bestellen Button */
-.bestellen {
-    background: var(--apple-red);
-    color: white;
-    border: none;
-    padding: 14px 22px;
-    border-radius: 999px;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.bestellen:hover {
-    background: var(--apple-red-dark);
-}
-
-/* Formular Animation */
-.formular {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.5s ease;
-}
-
-/* Checkbox */
-.checkbox {
-    display: flex;
-    gap: 10px;
-    font-size: 0.9rem;
-}
-
-/* Senden Button */
-.senden {
-    background: var(--apple-red);
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.senden:hover {
-    background: var(--apple-red-dark);
-}
-
 </head>
 
 <body>
@@ -232,156 +174,182 @@ footer {
             <img src="https://www.bsbz.at/fileadmin/_processed_/8/6/csm_2023_Hofladen_a19957797e.jpg">
         </div>
     </div>
-
 <section class="fleischpakete">
   <h2>Fleischpakete</h2>
-
-  <!-- Bio-Rindfleisch -->
-  <div class="paket" data-paket="Bio-Rindfleischpaket">
-    <h3>Bio-Rindfleischpaket</h3>
-    <p>
-      <strong>Wahlweise mit oder ohne Knochen</strong><br>
-      Mit Knochen: 5 kg – 85,00 €<br>
-      Ohne Knochen: 4 kg – 85,00 €
-    </p>
-    <p>
-      Inhalt: Schnitzel (1,20 kg), Braten (1,00 kg), Gulasch (0,80 kg),
-      Siedefleisch ohne Bein (1,00 kg)
-    </p>
-
+  
+  <div class="paket" data-paket="Paket 1 - 1kg Rindfleisch">
+    <h3>Paket 1</h3>
+    <p><strong>1kg Rindfleisch</strong> (für 1 Person/en)</p>
     <button class="bestellen">Hier Bestellen</button>
 
+    <!-- Formular versteckt in der Box -->
     <div class="formular" style="display:none;">
       <h4>Bestellformular</h4>
-      <form class="bestellForm"
-      action="https://formsubmit.co/schullaedele@bsbz.at"
-      method="POST">
-
-    <input type="hidden" name="_subject" value="Neue Fleischpaket-Bestellung">
-    <input type="hidden" name="_captcha" value="false">
-
-    <input type="text" name="Name" placeholder="Name*" required>
-    <input type="email" name="E-Mail" placeholder="E-Mail*" required>
-    <input type="tel" name="Telefon" placeholder="Telefon*" required>
-    <input type="text" name="Adresse" placeholder="Adresse*" required>
-
-    <div class="checkbox">
-        <input type="checkbox" required>
-        <label>
-            Sobald ich auf Bestellen klicke, bin ich mir bewusst,
-            dass ich kostenpflichtig bestellt habe und dafür zahlen muss.*
-        </label>
-    </div>
-
-    <textarea name="Zusätzliche Infos"
-              placeholder="Zusätzliche Infos (max. 500 Zeichen)"
-              maxlength="500"></textarea>
-
-    <input type="hidden" name="Paket" value="Bio-Rindfleischpaket">
-
-    <button type="submit" class="senden">Senden</button>
-</form>
-
+      <form class="bestellForm">
+        <input type="text" name="name" placeholder="Name*" required>
+        <input type="email" name="email" placeholder="E-Mail*" required>
+        <input type="tel" name="telefon" placeholder="Telefon*" required>
+        <input type="text" name="adresse" placeholder="Adresse*" required>
+        <textarea name="infos" placeholder="Zusätzliche Infos (max. 500 Zeichen)" maxlength="500"></textarea>
+        <input type="hidden" name="paket" value="Paket 1 - 1kg Rindfleisch">
+        <button type="submit" class="senden">Senden</button>
+      </form>
     </div>
   </div>
 
-  <!-- Bio-Schweinefleisch -->
-  <div class="paket" data-paket="Bio-Schweinefleischpaket">
-    <h3>Bio-Schweinefleischpaket</h3>
-    <p>
-      <strong>5 kg Edelteilpaket</strong><br>
-      69,50 € pro Paket
-    </p>
-    <p>
-      Inhalt: Schnitzel (1,40 kg), Geschnetzeltes (0,60 kg), Steak (0,70 kg),
-      Kotelett (1,10 kg), Braten (1,20 kg)
-    </p>
-
+  <div class="paket" data-paket="Paket 2 - 5kg Rindfleisch">
+    <h3>Paket 2</h3>
+    <p><strong>5kg Rindfleisch</strong> (für 5 Person/en)</p>
     <button class="bestellen">Hier Bestellen</button>
 
+    <!-- Formular versteckt in der Box -->
     <div class="formular" style="display:none;">
       <h4>Bestellformular</h4>
-     <form class="bestellForm"
-      action="https://formsubmit.co/schullaedele@bsbz.at"
-      method="POST">
-
-    <input type="hidden" name="_subject" value="Neue Fleischpaket-Bestellung">
-    <input type="hidden" name="_captcha" value="false">
-
-    <input type="text" name="Name" placeholder="Name*" required>
-    <input type="email" name="E-Mail" placeholder="E-Mail*" required>
-    <input type="tel" name="Telefon" placeholder="Telefon*" required>
-    <input type="text" name="Adresse" placeholder="Adresse*" required>
-
-    <div class="checkbox">
-        <input type="checkbox" required>
-        <label>
-            Sobald ich auf Bestellen klicke, bin ich mir bewusst,
-            dass ich kostenpflichtig bestellt habe und dafür zahlen muss.*
-        </label>
-    </div>
-
-    <textarea name="Zusätzliche Infos"
-              placeholder="Zusätzliche Infos (max. 500 Zeichen)"
-              maxlength="500"></textarea>
-
-    <input type="hidden" name="Paket" value="Bio-Rindfleischpaket">
-
-    <button type="submit" class="senden">Senden</button>
-</form>
-
-    </div>
-  </div>
-
-  <!-- Bio-Kalbfleisch -->
-  <div class="paket" data-paket="Bio-Kalbfleischpaket">
-    <h3>Bio-Kalbfleischpaket</h3>
-    <p>
-      <strong>5 kg Edelteilpaket</strong><br>
-      119,50 € pro Paket
-    </p>
-    <p>
-      Inhalt: Schnitzel (1,30 kg), Geschnetzeltes (0,70 kg), Braten (1,00 kg),
-      Gulasch (1,00 kg), Rückensteak (1,00 kg)
-    </p>
-
-    <button class="bestellen">Hier Bestellen</button>
-
-    <div class="formular" style="display:none;">
-      <h4>Bestellformular</h4>
-      <form class="bestellForm"
-      action="https://formsubmit.co/schullaedele@bsbz.at"
-      method="POST">
-
-    <input type="hidden" name="_subject" value="Neue Fleischpaket-Bestellung">
-    <input type="hidden" name="_captcha" value="false">
-
-    <input type="text" name="Name" placeholder="Name*" required>
-    <input type="email" name="E-Mail" placeholder="E-Mail*" required>
-    <input type="tel" name="Telefon" placeholder="Telefon*" required>
-    <input type="text" name="Adresse" placeholder="Adresse*" required>
-
-    <div class="checkbox">
-        <input type="checkbox" required>
-        <label>
-            Sobald ich auf Bestellen klicke, bin ich mir bewusst,
-            dass ich kostenpflichtig bestellt habe und dafür zahlen muss.*
-        </label>
-    </div>
-
-    <textarea name="Zusätzliche Infos"
-              placeholder="Zusätzliche Infos (max. 500 Zeichen)"
-              maxlength="500"></textarea>
-
-    <input type="hidden" name="Paket" value="Bio-Rindfleischpaket">
-
-    <button type="submit" class="senden">Senden</button>
-</form>
-
+      <form class="bestellForm">
+        <input type="text" name="name" placeholder="Name*" required>
+        <input type="email" name="email" placeholder="E-Mail*" required>
+        <input type="tel" name="telefon" placeholder="Telefon*" required>
+        <input type="text" name="adresse" placeholder="Adresse*" required>
+        <textarea name="infos" placeholder="Zusätzliche Infos (max. 500 Zeichen)" maxlength="500"></textarea>
+        <input type="hidden" name="paket" value="Paket 2 - 5kg Rindfleisch">
+        <button type="submit" class="senden">Senden</button>
+      </form>
     </div>
   </div>
 </section>
 
+<style>
+  .fleischpakete {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+  }
+
+  .fleischpakete h2 {
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .paket {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    flex: 1 1 200px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+  }
+
+  .paket:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  .paket h3 {
+    margin-bottom: 10px;
+    color: #d32f2f;
+  }
+
+  .paket p {
+    margin-bottom: 15px;
+    color: #555;
+  }
+
+  .bestellen {
+    background-color: #d32f2f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+  }
+
+  .bestellen:hover {
+    background-color: #b71c1c;
+  }
+
+  /* Formular im gleichen Stil */
+  .formular {
+    margin-top: 15px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: left;
+  }
+
+  .formular h4 {
+    margin-bottom: 10px;
+    color: #d32f2f;
+  }
+
+  .formular input, .formular textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  .formular .senden {
+    background-color: #d32f2f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .formular .senden:hover {
+    background-color: #b71c1c;
+  }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  emailjs.init("DEIN_EMAILJS_USER_ID"); // EmailJS User ID einfügen
+
+  document.querySelectorAll('.bestellen').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const formular = btn.nextElementSibling;
+      formular.style.display = formular.style.display === 'block' ? 'none' : 'block';
+      formular.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  document.querySelectorAll('.bestellForm').forEach(form => {
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const paket = form.querySelector('input[name="paket"]').value;
+
+      emailjs.send('DEIN_EMAILJS_SERVICE_ID', 'DEIN_EMAILJS_TEMPLATE_ID', {
+        name: form.name.value,
+        email: form.email.value,
+        telefon: form.telefon.value,
+        adresse: form.adresse.value,
+        infos: form.infos.value,
+        paket: paket
+      }).then(() => {
+        alert('Deine Bestellung wurde gesendet!');
+        form.reset();
+        form.parentElement.style.display = 'none';
+      }, (err) => {
+        alert('Fehler beim Senden: ' + JSON.stringify(err));
+      });
+    });
+  });
+</script>
 
 <section>
     <button class="collapsible">Produkte</button>
@@ -479,19 +447,6 @@ footer {
 </footer>
 
 <script>
-
-document.querySelectorAll(".bestellen").forEach(button => {
-    button.addEventListener("click", () => {
-        const formular = button.nextElementSibling;
-        if (formular.style.maxHeight) {
-            formular.style.maxHeight = null;
-        } else {
-            formular.style.maxHeight = formular.scrollHeight + "px";
-        }
-    });
-});
-</script>
-
 document.querySelectorAll(".collapsible").forEach(btn => {
     btn.addEventListener("click", function () {
         const content = this.nextElementSibling;
@@ -502,7 +457,3 @@ document.querySelectorAll(".collapsible").forEach(btn => {
 
 </body>
 </html>
-
-
-
-
